@@ -6,7 +6,7 @@ void sub(string s){
    int l=s.size();
 
    for(int c=1;c<=(1<<l)-1;c++){
-    string st="";
+    string st=""; 
 
     for(int i=0;i<l;i++){
         if(c&(1<<i)){
