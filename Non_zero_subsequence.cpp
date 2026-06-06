@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void solve(string s){
+void sub(string s){
 
    int l=s.size();
 
@@ -23,7 +23,7 @@ int main(){
     cout << "Enter the string: ";
     cin >> s;
 
-    solve(s);
+    sub(s);
     return 0;
 
 }
