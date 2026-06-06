@@ -1,29 +1,27 @@
-#include<iostream>
+#include <iostream>
+#include <string>
 using namespace std;
 
-void solve(string s){
+void solve(string s) {
+    int mask = 0;
 
-   int l=s.size();
-
-   for(int c=1;c<=(1<<l)-1;c++){
-    string st="";
-
-    for(int i=0;i<l;i++){
-        if(c&(1<<i)){
-            st+=s[i];
+    for (char c : s) {
+        if (c >= '0' && c <= '9') {
+            mask |= (1 << (c - '0'));
         }
     }
-    cout << st << endl;
-   }
+
+    if (mask == ((1 << 10) - 1))
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
 }
 
-int main(){
+int main() {
     string s;
-
-    cout << "Enter the string: ";
-    cin >> s;
+    cout << "Enter a string: ";
+    getline(cin, s);
 
     solve(s);
     return 0;
-
 }
